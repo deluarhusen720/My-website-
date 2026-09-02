@@ -3,12 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My Website</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    header {
+      background: #0d6efd;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: white;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #0d6efd;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 17px;
+    }
+
+    .button:hover {
+      background: #084298;
+    }
+
+    .services {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      width: 280px;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #0d6efd;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 30px;
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Welcome to My Website</h1>
-  <p>This is my first website.</p>
+  <header>
+    <h1>My Website</h1>
+    <p>Welcome to my website</p>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to My Website</h2>
+    <p>We provide quality services with honesty and dedication.</p>
+    <a href="#services" class="button">Our Services</a>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Gypsum Work</h3>
+        <p>Professional gypsum decoration and partition services.</p>
+      </div>
+
+      <div class="card">
+        <h3>Painting</h3>
+        <p>Quality interior and exterior painting services.</p>
+      </div>
+
+      <div class="card">
+        <h3>Maintenance</h3>
+        <p>Reliable building maintenance and renovation services.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 My Website. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
