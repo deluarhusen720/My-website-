@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Deluar Decoration & Maintenance</title>
 
 <style>
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -21,129 +20,132 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #063970, #0b5fa5);
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
   color: white;
+  padding: 18px 15px;
   text-align: center;
-  padding: 45px 20px;
 }
 
 header h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 6px;
 }
 
 header p {
-  font-size: 18px;
+  font-size: 15px;
 }
 
-nav {
-  background: #082f49;
-  text-align: center;
-  padding: 12px;
+.language {
+  margin-top: 12px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
+.language button {
+  border: none;
+  padding: 8px 13px;
+  margin: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: white;
+  color: #0f766e;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #f5b942;
+nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav a {
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px 12px;
 }
 
 section {
   max-width: 1000px;
-  margin: auto;
-  padding: 45px 20px;
+  margin: 25px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-h2 {
-  color: #063970;
+.hero {
   text-align: center;
-  margin-bottom: 25px;
-  font-size: 28px;
+  background: linear-gradient(135deg, #ccfbf1, #ffffff);
+}
+
+.hero h2 {
+  color: #0f766e;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .service {
-  background: white;
-  padding: 25px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-  border-top: 4px solid #f5b942;
+  background: #f0fdfa;
+  border-left: 5px solid #14b8a6;
+  padding: 18px;
+  border-radius: 10px;
 }
 
 .service h3 {
-  color: #063970;
-  margin-bottom: 10px;
+  color: #0f766e;
+  margin-bottom: 7px;
 }
 
 .contact {
-  background: #063970;
-  color: white;
   text-align: center;
-  border-radius: 12px;
-}
-
-.contact h2 {
-  color: #f5b942;
-}
-
-.contact a {
-  display: inline-block;
-  margin: 8px;
-  padding: 13px 22px;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.call {
-  background: #f5b942;
-  color: #111;
 }
 
 .whatsapp {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 13px 25px;
   background: #25D366;
   color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 footer {
-  background: #082f49;
+  background: #0f766e;
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 30px;
 }
 
-/* Floating WhatsApp Button */
-.whatsapp-float {
-  position: fixed;
-  width: 58px;
-  height: 58px;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  line-height: 58px;
-  text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
+.hidden {
+  display: none;
 }
 
-.whatsapp-float:hover {
-  background: #1ebe5d;
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 23px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  section {
+    margin: 15px;
+    padding: 20px;
+  }
 }
 </style>
 </head>
@@ -152,88 +154,176 @@ footer {
 
 <header>
   <h1>Deluar Decoration & Maintenance</h1>
-  <p>Professional Decoration, Painting & Maintenance Services</p>
+  <p id="tagline">Professional Decoration & Maintenance Services</p>
+
+  <div class="language">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('bn')">বাংলা</button>
+    <button onclick="setLanguage('ar')">العربية</button>
+  </div>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
+  <a href="#home" id="navHome">Home</a>
+  <a href="#services" id="navServices">Services</a>
+  <a href="#about" id="navAbout">About</a>
+  <a href="#contact" id="navContact">Contact</a>
 </nav>
 
-<section id="home">
-  <h2>Welcome</h2>
-  <p style="text-align:center;">
-    We provide professional decoration and maintenance services
-    with quality workmanship and reliable service.
+<section id="home" class="hero">
+  <h2 id="heroTitle">Welcome to Deluar Decoration & Maintenance</h2>
+  <p id="heroText">
+    Quality decoration, painting, gypsum and maintenance services.
   </p>
 </section>
 
 <section id="services">
-  <h2>Our Services</h2>
+  <h2 id="servicesTitle">Our Services</h2>
 
   <div class="services">
 
     <div class="service">
-      <h3>Gypsum Decoration</h3>
-      <p>Ceiling, partition and modern gypsum decoration work.</p>
+      <h3 id="s1Title">Gypsum Decoration</h3>
+      <p id="s1Text">Beautiful gypsum ceiling, partition and decoration work.</p>
     </div>
 
     <div class="service">
-      <h3>Painting</h3>
-      <p>Interior and exterior painting with quality finishing.</p>
+      <h3 id="s2Title">Painting</h3>
+      <p id="s2Text">Interior and exterior painting with professional finishing.</p>
     </div>
 
     <div class="service">
-      <h3>Tile Fixing</h3>
-      <p>Professional floor and wall tile fixing services.</p>
+      <h3 id="s3Title">Tile Fixing</h3>
+      <p id="s3Text">Professional wall and floor tile fixing services.</p>
     </div>
 
     <div class="service">
-      <h3>Maintenance</h3>
-      <p>General building maintenance and repair services.</p>
-    </div>
-
-    <div class="service">
-      <h3>MDF Decoration</h3>
-      <p>Modern MDF decoration and custom interior work.</p>
-    </div>
-
-    <div class="service">
-      <h3>Renovation</h3>
-      <p>Home and room renovation with professional finishing.</p>
+      <h3 id="s4Title">Maintenance</h3>
+      <p id="s4Text">General building decoration and maintenance services.</p>
     </div>
 
   </div>
 </section>
 
+<section id="about">
+  <h2 id="aboutTitle">About Us</h2>
+  <p id="aboutText">
+    Deluar Decoration & Maintenance provides reliable decoration,
+    painting, gypsum, tile fixing and general maintenance services.
+  </p>
+</section>
+
 <section id="contact" class="contact">
-  <h2>Contact Us</h2>
-
-  <p>For quotation and service inquiries, contact us directly.</p>
-
-  <br>
-
-  <a class="call" href="tel:+971557205766">
-    📞 Call Us
-  </a>
+  <h2 id="contactTitle">Contact Us</h2>
+  <p id="contactText">For service enquiries, contact us on WhatsApp.</p>
 
   <a class="whatsapp"
-     href="https://wa.me/971557205766?text=Hello%20Deluar%20Decoration%20%26%20Maintenance%2C%20I%20need%20your%20service."
+     href="https://wa.me/971557205766"
      target="_blank">
-    🟢 WhatsApp
+     WhatsApp
   </a>
 </section>
 
 <footer>
-  <p>© 2026 Deluar Decoration & Maintenance. All Rights Reserved.</p>
+  <p>© 2026 Deluar Decoration & Maintenance</p>
 </footer>
 
-<a class="whatsapp-float"
-   href="https://wa.me/971557205766?text=Hello%20Deluar%20Decoration%20%26%20Maintenance%2C%20I%20need%20your%20service."
-   target="_blank">
-  💬
-</a>
+<script>
+
+const text = {
+
+en: {
+tagline: "Professional Decoration & Maintenance Services",
+navHome: "Home",
+navServices: "Services",
+navAbout: "About",
+navContact: "Contact",
+heroTitle: "Welcome to Deluar Decoration & Maintenance",
+heroText: "Quality decoration, painting, gypsum and maintenance services.",
+servicesTitle: "Our Services",
+s1Title: "Gypsum Decoration",
+s1Text: "Beautiful gypsum ceiling, partition and decoration work.",
+s2Title: "Painting",
+s2Text: "Interior and exterior painting with professional finishing.",
+s3Title: "Tile Fixing",
+s3Text: "Professional wall and floor tile fixing services.",
+s4Title: "Maintenance",
+s4Text: "General building decoration and maintenance services.",
+aboutTitle: "About Us",
+aboutText: "Deluar Decoration & Maintenance provides reliable decoration, painting, gypsum, tile fixing and general maintenance services.",
+contactTitle: "Contact Us",
+contactText: "For service enquiries, contact us on WhatsApp."
+},
+
+bn: {
+tagline: "পেশাদার ডেকোরেশন ও মেইনটেন্যান্স সার্ভিস",
+navHome: "হোম",
+navServices: "সার্ভিস",
+navAbout: "আমাদের সম্পর্কে",
+navContact: "যোগাযোগ",
+heroTitle: "Deluar Decoration & Maintenance-এ স্বাগতম",
+heroText: "মানসম্মত ডেকোরেশন, পেইন্টিং, জিপসাম ও মেইনটেন্যান্স সার্ভিস।",
+servicesTitle: "আমাদের সার্ভিস",
+s1Title: "জিপসাম ডেকোরেশন",
+s1Text: "সুন্দর জিপসাম সিলিং, পার্টিশন ও ডেকোরেশন কাজ।",
+s2Title: "পেইন্টিং",
+s2Text: "পেশাদার ফিনিশিংসহ ঘরের ভিতর ও বাইরের পেইন্টিং।",
+s3Title: "টাইলস ফিক্সিং",
+s3Text: "দেয়াল ও মেঝের টাইলস ফিক্সিং সার্ভিস।",
+s4Title: "মেইনটেন্যান্স",
+s4Text: "বিল্ডিং ডেকোরেশন ও সাধারণ মেইনটেন্যান্স সার্ভিস।",
+aboutTitle: "আমাদের সম্পর্কে",
+aboutText: "Deluar Decoration & Maintenance নির্ভরযোগ্য ডেকোরেশন, পেইন্টিং, জিপসাম, টাইলস ও সাধারণ মেইনটেন্যান্স সার্ভিস প্রদান করে।",
+contactTitle: "যোগাযোগ করুন",
+contactText: "সার্ভিসের জন্য WhatsApp-এ যোগাযোগ করুন।"
+},
+
+ar: {
+tagline: "خدمات الديكور والصيانة الاحترافية",
+navHome: "الرئيسية",
+navServices: "الخدمات",
+navAbout: "من نحن",
+navContact: "اتصل بنا",
+heroTitle: "مرحباً بكم في Deluar Decoration & Maintenance",
+heroText: "خدمات عالية الجودة في الديكور والدهان والجبس والصيانة.",
+servicesTitle: "خدماتنا",
+s1Title: "ديكور الجبس",
+s1Text: "أعمال أسقف الجبس والقواطع والديكور بشكل احترافي.",
+s2Title: "الدهان",
+s2Text: "دهان داخلي وخارجي مع تشطيب احترافي.",
+s3Title: "تركيب البلاط",
+s3Text: "خدمات تركيب بلاط الجدران والأرضيات.",
+s4Title: "الصيانة",
+s4Text: "خدمات الديكور والصيانة العامة للمباني.",
+aboutTitle: "من نحن",
+aboutText: "تقدم Deluar Decoration & Maintenance خدمات موثوقة في الديكور والدهان والجبس وتركيب البلاط والصيانة العامة.",
+contactTitle: "اتصل بنا",
+contactText: "للاستفسار عن الخدمات، تواصل معنا عبر واتساب."
+}
+
+};
+
+function setLanguage(lang) {
+
+  for (const id in text[lang]) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.textContent = text[lang][id];
+    }
+  }
+
+  if (lang === "ar") {
+    document.documentElement.lang = "ar";
+    document.body.dir = "rtl";
+  } else {
+    document.documentElement.lang = lang;
+    document.body.dir = "ltr";
+  }
+}
+
+setLanguage("en");
+
+</script>
 
 </body>
 </html>
