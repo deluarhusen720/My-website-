@@ -4,64 +4,502 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deluar Decoration & Maintenance</title>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f8fafc;line-height:1.6}
 a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:100;background:#06182a;color:#fff;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 18px rgba(0,0,0,.15)}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}.logo-mark{width:42px;height:42px;border:2px solid #d8a63a;border-radius:9px;display:grid;place-items:center;color:#d8a63a;font-size:21px}.logo small{display:block;color:#d8a63a;font-size:11px;letter-spacing:1px}
-nav{display:flex;gap:28px;align-items:center;font-size:14px}nav a:hover,nav a.active{color:#e0ad42}.wa{background:#d8a63a;color:#07182a;padding:12px 18px;border-radius:12px;font-weight:700}
-.hero{text-align:center;padding:78px 6% 55px;background:linear-gradient(135deg,#fff,#f3f6f9)}.eyebrow{color:#c7962e;font-weight:800;letter-spacing:1px}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.08;margin:10px 0 18px;color:#0b1d31}.hero p{max-width:700px;margin:auto;color:#5d6673;font-size:17px}
-section{padding:60px 6%}.filters{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:35px 0}.filter{border:1px solid #e0e4e9;background:#fff;padding:11px 18px;border-radius:12px;font-weight:700;color:#263244}.filter.active{background:#d8a63a;border-color:#d8a63a;color:#07182a}
-.gallery{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{background:#fff;border:1px solid #e5e9ee;border-radius:16px;overflow:hidden;box-shadow:0 7px 25px rgba(8,25,43,.07)}.card img{width:100%;height:245px;object-fit:cover;display:block}.card-body{padding:22px}.badge{display:inline-block;border:1px solid #e0b65a;color:#b07c16;padding:5px 9px;border-radius:50%;margin-top:-42px;background:#fff;position:relative}.card h3{font-size:20px;margin:10px 0 6px}.card p{color:#66707d;font-size:14px}.meta{display:flex;justify-content:space-between;gap:10px;margin-top:17px;color:#68727e;font-size:12px}
-.cta{background:#06182a;color:#fff;border-radius:28px;margin:20px 6% 60px;padding:45px 5%;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:34px;line-height:1.15}.cta p{color:#c8d0d9;margin-top:10px}.cta-btn{display:inline-block;background:#d8a63a;color:#07182a;padding:14px 22px;border-radius:11px;font-weight:800;margin-top:18px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.feature{text-align:center;border-left:1px solid #425063;padding:5px 15px}.feature strong{display:block;margin:6px 0}.feature span{font-size:13px;color:#c8d0d9}
-footer{text-align:center;padding:25px;background:#041322;color:#aeb8c4;font-size:13px}
-@media(max-width:850px){nav{display:none}.gallery{grid-template-columns:1fr 1fr}.cta{flex-direction:column;align-items:flex-start}.features{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){section{padding:45px 5%}.gallery{grid-template-columns:1fr}.card img{height:230px}.features{grid-template-columns:1fr}.hero{padding-top:55px}.cta{margin-left:5%;margin-right:5%}}
+
+header{
+position:sticky;top:0;z-index:100;background:#06182a;color:#fff;
+padding:14px 5%;display:flex;align-items:center;justify-content:space-between;
+box-shadow:0 3px 18px rgba(0,0,0,.15);gap:15px
+}
+
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+.logo-mark{
+width:42px;height:42px;border:2px solid #d8a63a;border-radius:9px;
+display:grid;place-items:center;color:#d8a63a;font-size:21px
+}
+.logo small{display:block;color:#d8a63a;font-size:11px;letter-spacing:1px}
+
+nav{display:flex;gap:24px;align-items:center;font-size:14px}
+nav a:hover,nav a.active{color:#e0ad42}
+
+.wa{
+background:#d8a63a;color:#07182a;padding:12px 18px;
+border-radius:12px;font-weight:700
+}
+
+.language{
+display:flex;gap:5px;align-items:center
+}
+.language button{
+border:1px solid #d8a63a;background:transparent;color:#fff;
+padding:7px 9px;border-radius:7px;cursor:pointer;font-size:12px
+}
+.language button.active{
+background:#d8a63a;color:#07182a
+}
+
+.hero{
+text-align:center;padding:78px 6% 55px;
+background:linear-gradient(135deg,#fff,#f3f6f9)
+}
+.eyebrow{color:#c7962e;font-weight:800;letter-spacing:1px}
+.hero h1{
+font-size:clamp(38px,5vw,64px);line-height:1.08;
+margin:10px 0 18px;color:#0b1d31
+}
+.hero p{max-width:700px;margin:auto;color:#5d6673;font-size:17px}
+
+section{padding:60px 6%}
+
+.filters{
+display:flex;gap:12px;justify-content:center;
+flex-wrap:wrap;margin:35px 0
+}
+.filter{
+border:1px solid #e0e4e9;background:#fff;padding:11px 18px;
+border-radius:12px;font-weight:700;color:#263244
+}
+.filter.active{
+background:#d8a63a;border-color:#d8a63a;color:#07182a
+}
+
+.gallery{
+max-width:1200px;margin:auto;
+display:grid;grid-template-columns:repeat(3,1fr);gap:24px
+}
+
+.card{
+background:#fff;border:1px solid #e5e9ee;border-radius:16px;
+overflow:hidden;box-shadow:0 7px 25px rgba(8,25,43,.07)
+}
+
+.card img{
+width:100%;height:245px;object-fit:cover;display:block
+}
+
+.card-body{padding:22px}
+
+.badge{
+display:inline-block;border:1px solid #e0b65a;color:#b07c16;
+padding:5px 9px;border-radius:50%;margin-top:-42px;
+background:#fff;position:relative
+}
+
+.card h3{font-size:20px;margin:10px 0 6px}
+.card p{color:#66707d;font-size:14px}
+
+.meta{
+display:flex;justify-content:space-between;gap:10px;
+margin-top:17px;color:#68727e;font-size:12px
+}
+
+.cta{
+background:#06182a;color:#fff;border-radius:28px;
+margin:20px 6% 60px;padding:45px 5%;
+display:flex;justify-content:space-between;align-items:center;gap:30px
+}
+
+.cta h2{font-size:34px;line-height:1.15}
+.cta p{color:#c8d0d9;margin-top:10px}
+
+.cta-btn{
+display:inline-block;background:#d8a63a;color:#07182a;
+padding:14px 22px;border-radius:11px;font-weight:800;margin-top:18px
+}
+
+.features{
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px
+}
+
+.feature{
+text-align:center;border-left:1px solid #425063;padding:5px 15px
+}
+
+.feature strong{display:block;margin:6px 0}
+.feature span{font-size:13px;color:#c8d0d9}
+
+footer{
+text-align:center;padding:25px;background:#041322;
+color:#aeb8c4;font-size:13px
+}
+
+@media(max-width:1050px){
+nav{gap:12px}
+.gallery{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:850px){
+nav{display:none}
+.cta{flex-direction:column;align-items:flex-start}
+.features{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:560px){
+header{flex-wrap:wrap}
+.language{order:3;width:100%;justify-content:center}
+section{padding:45px 5%}
+.gallery{grid-template-columns:1fr}
+.card img{height:230px}
+.features{grid-template-columns:1fr}
+.hero{padding-top:55px}
+.cta{margin-left:5%;margin-right:5%}
+}
+
+body.rtl{
+direction:rtl;
+}
+body.rtl .logo{
+flex-direction:row-reverse;
+}
+body.rtl .meta{
+flex-direction:row-reverse;
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <a class="logo" href="#home"><div class="logo-mark">⌂</div><div>DELUAR<small>DECORATION & MAINTENANCE</small></div></a>
-  <nav><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a class="active" href="#work">Our Work</a><a href="#why">Why Us</a><a href="#contact">Contact Us</a></nav>
-  <a class="wa" href="https://wa.me/971557205767" target="_blank">WhatsApp</a>
+
+<a class="logo" href="#home">
+<div class="logo-mark">⌂</div>
+<div>
+DELUAR
+<small>DECORATION & MAINTENANCE</small>
+</div>
+</a>
+
+<nav>
+<a href="#home" data-en="Home" data-bn="হোম" data-ar="الرئيسية">Home</a>
+<a href="#about" data-en="About Us" data-bn="আমাদের সম্পর্কে" data-ar="من نحن">About Us</a>
+<a href="#services" data-en="Services" data-bn="সার্ভিস" data-ar="الخدمات">Services</a>
+<a class="active" href="#work" data-en="Our Work" data-bn="আমাদের কাজ" data-ar="أعمالنا">Our Work</a>
+<a href="#why" data-en="Why Us" data-bn="কেন আমরা" data-ar="لماذا نحن">Why Us</a>
+<a href="#contact" data-en="Contact Us" data-bn="যোগাযোগ" data-ar="اتصل بنا">Contact Us</a>
+</nav>
+
+<div class="language">
+<button onclick="changeLanguage('bn')">বাংলা</button>
+<button class="active" onclick="changeLanguage('en')">English</button>
+<button onclick="changeLanguage('ar')">العربية</button>
+</div>
+
+<a class="wa" href="https://wa.me/971557205767" target="_blank">WhatsApp</a>
+
 </header>
 
+
 <section class="hero" id="work">
-  <div class="eyebrow">OUR WORK</div>
-  <h1>Our Recent Projects</h1>
-  <p>We take pride in delivering high-quality decoration and maintenance solutions that bring our clients' visions to life.</p>
+
+<div class="eyebrow" data-en="OUR WORK" data-bn="আমাদের কাজ" data-ar="أعمالنا">
+OUR WORK
+</div>
+
+<h1
+data-en="Our Recent Projects"
+data-bn="আমাদের সাম্প্রতিক কাজ"
+data-ar="مشاريعنا الأخيرة">
+Our Recent Projects
+</h1>
+
+<p
+data-en="We take pride in delivering high-quality decoration and maintenance solutions that bring our clients' visions to life."
+data-bn="আমরা উচ্চমানের ডেকোরেশন ও মেইনটেন্যান্স কাজের মাধ্যমে আমাদের ক্লায়েন্টদের পরিকল্পনাকে বাস্তবে রূপ দিতে গর্বিত।"
+data-ar="نفتخر بتقديم حلول عالية الجودة في الديكور والصيانة لتحويل أفكار عملائنا إلى واقع.">
+We take pride in delivering high-quality decoration and maintenance solutions that bring our clients' visions to life.
+</p>
+
 </section>
+
 
 <section>
-  <div class="filters">
-    <span class="filter active">All Projects</span><span class="filter">Gypsum Ceiling</span><span class="filter">Painting</span><span class="filter">LED Ceiling</span><span class="filter">Maintenance</span><span class="filter">MDF & Interior</span>
-  </div>
-  <div class="gallery">
-    <article class="card"><img src="images/gypsum-ceiling.jpg" alt="Gypsum ceiling work"><div class="card-body"><span class="badge">⌂</span><h3>Gypsum Ceiling Work</h3><p>Modern gypsum ceiling design with track lights installation.</p><div class="meta"><span>📍 UAE</span><span>🛠️ Gypsum</span></div></div></article>
-    <article class="card"><img src="images/led-ceiling.jpg" alt="LED ceiling design"><div class="card-body"><span class="badge">✦</span><h3>LED Ceiling Design</h3><p>Elegant LED strip ceiling design for a modern and luxurious look.</p><div class="meta"><span>📍 UAE</span><span>💡 LED Ceiling</span></div></div></article>
-    <article class="card"><img src="images/gypsum-progress.jpg" alt="Gypsum work in progress"><div class="card-body"><span class="badge">🔧</span><h3>Gypsum Work in Progress</h3><p>High-quality gypsum ceiling work with careful finishing and detailing.</p><div class="meta"><span>📍 UAE</span><span>🧱 Decoration</span></div></div></article>
-  </div>Deluar-Website-Gallery-Updated.zip<div class="gallery">
-  <article class="card"><img src="images/Gypsum%20ceiling.jpg" alt="Gypsum ceiling work"><div class="card-body"><span class="badge">⌂</span><h3>Gypsum Ceiling Work</h3><p>Modern gypsum ceiling design with track lights installation.</p><div class="meta"><span>📍 UAE</span><span>🛠️ Gypsum</span></div></div></article>
 
-  <article class="card"><img src="images/Led%20ceiling.jpg" alt="LED ceiling design"><div class="card-body"><span class="badge">✦</span><h3>LED Ceiling Design</h3><p>Elegant LED strip ceiling design for a modern and luxurious look.</p><div class="meta"><span>📍 UAE</span><span>💡 LED Ceiling</span></div></div></article>
+<div class="filters">
 
-  <article class="card"><img src="images/Gypsum%20progress.jpg" alt="Gypsum work in progress"><div class="card-body"><span class="badge">🔧</span><h3>Gypsum Work in Progress</h3><p>High-quality gypsum ceiling work with careful finishing and detailing.</p><div class="meta"><span>📍 UAE</span><span>🧱 Decoration</span></div></div></article>
+<span class="filter active"
+data-en="All Projects"
+data-bn="সব প্রজেক্ট"
+data-ar="جميع المشاريع">
+All Projects
+</span>
+
+<span class="filter"
+data-en="Gypsum Ceiling"
+data-bn="জিপসাম সিলিং"
+data-ar="أسقف الجبس">
+Gypsum Ceiling
+</span>
+
+<span class="filter"
+data-en="Painting"
+data-bn="পেইন্টিং"
+data-ar="الدهان">
+Painting
+</span>
+
+<span class="filter"
+data-en="LED Ceiling"
+data-bn="LED সিলিং"
+data-ar="أسقف LED">
+LED Ceiling
+</span>
+
+<span class="filter"
+data-en="Maintenance"
+data-bn="মেইনটেন্যান্স"
+data-ar="الصيانة">
+Maintenance
+</span>
+
+<span class="filter"
+data-en="MDF & Interior"
+data-bn="MDF ও ইন্টেরিয়র"
+data-ar="MDF والديكور الداخلي">
+MDF & Interior
+</span>
+
+</div>
+
+
+<div class="gallery">
+
+<article class="card">
+
+<img src="images/Gypsum%20ceiling.jpg" alt="Gypsum ceiling work">
+
+<div class="card-body">
+
+<span class="badge">⌂</span>
+
+<h3
+data-en="Gypsum Ceiling Work"
+data-bn="জিপসাম সিলিং কাজ"
+data-ar="أعمال أسقف الجبس">
+Gypsum Ceiling Work
+</h3>
+
+<p
+data-en="Modern gypsum ceiling design with track lights installation."
+data-bn="ট্র্যাক লাইটসহ আধুনিক জিপসাম সিলিং ডিজাইন।"
+data-ar="تصميم سقف جبس حديث مع تركيب إضاءة المسار.">
+Modern gypsum ceiling design with track lights installation.
+</p>
+
+<div class="meta">
+<span>📍 UAE</span>
+<span>🛠️ Gypsum</span>
+</div>
+
+</div>
+</article>
+
+
+<article class="card">
+
+<img src="images/Led%20ceiling.jpg" alt="LED ceiling design">
+
+<div class="card-body">
+
+<span class="badge">✦</span>
+
+<h3
+data-en="LED Ceiling Design"
+data-bn="LED সিলিং ডিজাইন"
+data-ar="تصميم أسقف LED">
+LED Ceiling Design
+</h3>
+
+<p
+data-en="Elegant LED strip ceiling design for a modern and luxurious look."
+data-bn="আধুনিক ও বিলাসবহুল লুকের জন্য আকর্ষণীয় LED স্ট্রিপ সিলিং ডিজাইন।"
+data-ar="تصميم أنيق لسقف بإضاءة LED لمنظر عصري وفاخر.">
+Elegant LED strip ceiling design for a modern and luxurious look.
+</p>
+
+<div class="meta">
+<span>📍 UAE</span>
+<span>💡 LED Ceiling</span>
+</div>
+
+</div>
+</article>
+
+
+<article class="card">
+
+<img src="images/Gypsum%20progress.jpg" alt="Gypsum work in progress">
+
+<div class="card-body">
+
+<span class="badge">🔧</span>
+
+<h3
+data-en="Gypsum Work in Progress"
+data-bn="জিপসাম কাজ চলমান"
+data-ar="أعمال الجبس قيد التنفيذ">
+Gypsum Work in Progress
+</h3>
+
+<p
+data-en="High-quality gypsum ceiling work with careful finishing and detailing."
+data-bn="সুন্দর ফিনিশিং ও ডিটেইলিংসহ উচ্চমানের জিপসাম সিলিং কাজ।"
+data-ar="أعمال جبس عالية الجودة مع تشطيب وتفاصيل دقيقة.">
+High-quality gypsum ceiling work with careful finishing and detailing.
+</p>
+
+<div class="meta">
+<span>📍 UAE</span>
+<span>🧱 Decoration</span>
+</div>
+
+</div>
+</article>
+
 </div>
 </section>
 
-<section id="services"><div style="text-align:center;max-width:700px;margin:auto"><div class="eyebrow">OUR SERVICES</div><h2 style="font-size:36px;margin:8px 0 12px">Decoration & Maintenance</h2><p style="color:#66707d">Gypsum decoration, ceiling design, painting, renovation and general building maintenance.</p></div></section>
+
+<section id="services">
+
+<div style="text-align:center;max-width:700px;margin:auto">
+
+<div class="eyebrow"
+data-en="OUR SERVICES"
+data-bn="আমাদের সার্ভিস"
+data-ar="خدماتنا">
+OUR SERVICES
+</div>
+
+<h2
+style="font-size:36px;margin:8px 0 12px"
+data-en="Decoration & Maintenance"
+data-bn="ডেকোরেশন ও মেইনটেন্যান্স"
+data-ar="الديكور والصيانة">
+Decoration & Maintenance
+</h2>
+
+<p
+style="color:#66707d"
+data-en="Gypsum decoration, ceiling design, painting, renovation and general building maintenance."
+data-bn="জিপসাম ডেকোরেশন, সিলিং ডিজাইন, পেইন্টিং, রেনোভেশন এবং সাধারণ বিল্ডিং মেইনটেন্যান্স।"
+data-ar="ديكور الجبس وتصميم الأسقف والدهان والتجديد وصيانة المباني العامة.">
+Gypsum decoration, ceiling design, painting, renovation and general building maintenance.
+</p>
+
+</div>
+</section>
+
 
 <div class="cta" id="contact">
-  <div><h2>Let's Build Something<br>Beautiful Together</h2><p>Quality decoration and maintenance services with care and perfection.</p><a class="cta-btn" href="https://wa.me/971557205767" target="_blank">Get a Free Quote →</a></div>
-  <div class="features" id="why">
-    <div class="feature"><strong>✓ High Quality</strong><span>Quality materials and clean finishing.</span></div>
-    <div class="feature"><strong>👥 Skilled Team</strong><span>Experienced and reliable workmanship.</span></div>
-    <div class="feature"><strong>◷ On Time</strong><span>We respect your project schedule.</span></div>
-    <div class="feature"><strong>☎ Support</strong><span>Easy contact through WhatsApp or call.</span></div>
-  </div>
+
+<div>
+
+<h2
+data-en="Let's Build Something Beautiful Together"
+data-bn="চলুন একসাথে সুন্দর কিছু তৈরি করি"
+data-ar="لنبنِ شيئًا جميلاً معًا">
+Let's Build Something<br>Beautiful Together
+</h2>
+
+<p
+data-en="Quality decoration and maintenance services with care and perfection."
+data-bn="যত্ন ও নিখুঁততার সাথে মানসম্মত ডেকোরেশন ও মেইনটেন্যান্স সার্ভিস।"
+data-ar="خدمات ديكور وصيانة عالية الجودة بعناية وإتقان.">
+Quality decoration and maintenance services with care and perfection.
+</p>
+
+<a class="cta-btn" href="https://wa.me/971557205767" target="_blank"
+data-en="Get a Free Quote →"
+data-bn="ফ্রি কোটেশন নিন →"
+data-ar="احصل على عرض مجاني →">
+Get a Free Quote →
+</a>
+
 </div>
-<footer id="about">© 2026 Deluar Decoration & Maintenance. All rights reserved.</footer>
+
+
+<div class="features" id="why">
+
+<div class="feature">
+<strong data-en="✓ High Quality" data-bn="✓ উচ্চমানের কাজ" data-ar="✓ جودة عالية">✓ High Quality</strong>
+<span data-en="Quality materials and clean finishing." data-bn="মানসম্মত উপকরণ ও পরিষ্কার ফিনিশিং।" data-ar="مواد عالية الجودة وتشطيب نظيف.">Quality materials and clean finishing.</span>
+</div>
+
+<div class="feature">
+<strong data-en="👥 Skilled Team" data-bn="👥 দক্ষ টিম" data-ar="👥 فريق ماهر">👥 Skilled Team</strong>
+<span data-en="Experienced and reliable workmanship." data-bn="অভিজ্ঞ ও নির্ভরযোগ্য কাজ।" data-ar="عمالة ذات خبرة وموثوقة.">Experienced and reliable workmanship.</span>
+</div>
+
+<div class="feature">
+<strong data-en="◷ On Time" data-bn="◷ সময়মতো" data-ar="◷ في الموعد">◷ On Time</strong>
+<span data-en="We respect your project schedule." data-bn="আমরা আপনার প্রজেক্টের সময়সূচিকে সম্মান করি।" data-ar="نلتزم بجدول مشروعك.">We respect your project schedule.</span>
+</div>
+
+<div class="feature">
+<strong data-en="☎ Support" data-bn="☎ সাপোর্ট" data-ar="☎ الدعم">☎ Support</strong>
+<span data-en="Easy contact through WhatsApp or call." data-bn="WhatsApp বা ফোনে সহজে যোগাযোগ করুন।" data-ar="تواصل معنا بسهولة عبر واتساب أو الهاتف.">Easy contact through WhatsApp or call.</span>
+</div>
+
+</div>
+</div>
+
+
+<footer id="about">
+© 2026 Deluar Decoration & Maintenance. All rights reserved.
+</footer>
+
+
+<script>
+
+function changeLanguage(lang){
+
+const elements=document.querySelectorAll('[data-en]');
+
+elements.forEach(function(el){
+
+if(lang==='bn'){
+el.textContent=el.getAttribute('data-bn');
+}
+
+else if(lang==='ar'){
+el.textContent=el.getAttribute('data-ar');
+}
+
+else{
+el.textContent=el.getAttribute('data-en');
+}
+
+});
+
+const buttons=document.querySelectorAll('.language button');
+
+buttons.forEach(function(btn){
+btn.classList.remove('active');
+});
+
+if(lang==='bn'){
+buttons[0].classList.add('active');
+document.body.classList.remove('rtl');
+}
+
+else if(lang==='ar'){
+buttons[2].classList.add('active');
+document.body.classList.add('rtl');
+}
+
+else{
+buttons[1].classList.add('active');
+document.body.classList.remove('rtl');
+}
+
+}
+
+</script>
+
 </body>
 </html>
