@@ -4,326 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deluar Decoration & Maintenance</title>
-
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #222;
-  line-height: 1.6;
-}
-
-header {
-  background: linear-gradient(135deg, #0f766e, #14b8a6);
-  color: white;
-  padding: 18px 15px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 28px;
-  margin-bottom: 6px;
-}
-
-header p {
-  font-size: 15px;
-}
-
-.language {
-  margin-top: 12px;
-}
-
-.language button {
-  border: none;
-  padding: 8px 13px;
-  margin: 3px;
-  border-radius: 20px;
-  cursor: pointer;
-  background: white;
-  color: #0f766e;
-  font-weight: bold;
-}
-
-nav {
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-nav a {
-  color: #0f766e;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 5px 12px;
-}
-
-section {
-  max-width: 1000px;
-  margin: 25px auto;
-  padding: 25px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-}
-
-.hero {
-  text-align: center;
-  background: linear-gradient(135deg, #ccfbf1, #ffffff);
-}
-
-.hero h2 {
-  color: #0f766e;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.service {
-  background: #f0fdfa;
-  border-left: 5px solid #14b8a6;
-  padding: 18px;
-  border-radius: 10px;
-}
-
-.service h3 {
-  color: #0f766e;
-  margin-bottom: 7px;
-}
-
-.contact {
-  text-align: center;
-}
-
-.whatsapp {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 13px 25px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-footer {
-  background: #0f766e;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-.hidden {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 23px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  section {
-    margin: 15px;
-    padding: 20px;
-  }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f8fafc;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:100;background:#06182a;color:#fff;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 18px rgba(0,0,0,.15)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}.logo-mark{width:42px;height:42px;border:2px solid #d8a63a;border-radius:9px;display:grid;place-items:center;color:#d8a63a;font-size:21px}.logo small{display:block;color:#d8a63a;font-size:11px;letter-spacing:1px}
+nav{display:flex;gap:28px;align-items:center;font-size:14px}nav a:hover,nav a.active{color:#e0ad42}.wa{background:#d8a63a;color:#07182a;padding:12px 18px;border-radius:12px;font-weight:700}
+.hero{text-align:center;padding:78px 6% 55px;background:linear-gradient(135deg,#fff,#f3f6f9)}.eyebrow{color:#c7962e;font-weight:800;letter-spacing:1px}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.08;margin:10px 0 18px;color:#0b1d31}.hero p{max-width:700px;margin:auto;color:#5d6673;font-size:17px}
+section{padding:60px 6%}.filters{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:35px 0}.filter{border:1px solid #e0e4e9;background:#fff;padding:11px 18px;border-radius:12px;font-weight:700;color:#263244}.filter.active{background:#d8a63a;border-color:#d8a63a;color:#07182a}
+.gallery{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{background:#fff;border:1px solid #e5e9ee;border-radius:16px;overflow:hidden;box-shadow:0 7px 25px rgba(8,25,43,.07)}.card img{width:100%;height:245px;object-fit:cover;display:block}.card-body{padding:22px}.badge{display:inline-block;border:1px solid #e0b65a;color:#b07c16;padding:5px 9px;border-radius:50%;margin-top:-42px;background:#fff;position:relative}.card h3{font-size:20px;margin:10px 0 6px}.card p{color:#66707d;font-size:14px}.meta{display:flex;justify-content:space-between;gap:10px;margin-top:17px;color:#68727e;font-size:12px}
+.cta{background:#06182a;color:#fff;border-radius:28px;margin:20px 6% 60px;padding:45px 5%;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:34px;line-height:1.15}.cta p{color:#c8d0d9;margin-top:10px}.cta-btn{display:inline-block;background:#d8a63a;color:#07182a;padding:14px 22px;border-radius:11px;font-weight:800;margin-top:18px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.feature{text-align:center;border-left:1px solid #425063;padding:5px 15px}.feature strong{display:block;margin:6px 0}.feature span{font-size:13px;color:#c8d0d9}
+footer{text-align:center;padding:25px;background:#041322;color:#aeb8c4;font-size:13px}
+@media(max-width:850px){nav{display:none}.gallery{grid-template-columns:1fr 1fr}.cta{flex-direction:column;align-items:flex-start}.features{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){section{padding:45px 5%}.gallery{grid-template-columns:1fr}.card img{height:230px}.features{grid-template-columns:1fr}.hero{padding-top:55px}.cta{margin-left:5%;margin-right:5%}}
 </style>
 </head>
-
 <body>
-
 <header>
-  <h1>Deluar Decoration & Maintenance</h1>
-  <p id="tagline">Professional Decoration & Maintenance Services</p>
-
-  <div class="language">
-    <button onclick="setLanguage('en')">English</button>
-    <button onclick="setLanguage('bn')">বাংলা</button>
-    <button onclick="setLanguage('ar')">العربية</button>
-  </div>
+  <a class="logo" href="#home"><div class="logo-mark">⌂</div><div>DELUAR<small>DECORATION & MAINTENANCE</small></div></a>
+  <nav><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a class="active" href="#work">Our Work</a><a href="#why">Why Us</a><a href="#contact">Contact Us</a></nav>
+  <a class="wa" href="https://wa.me/971557205767" target="_blank">WhatsApp</a>
 </header>
 
-<nav>
-  <a href="#home" id="navHome">Home</a>
-  <a href="#services" id="navServices">Services</a>
-  <a href="#about" id="navAbout">About</a>
-  <a href="#contact" id="navContact">Contact</a>
-</nav>
-
-<section id="home" class="hero">
-  <h2 id="heroTitle">Welcome to Deluar Decoration & Maintenance</h2>
-  <p id="heroText">
-    Quality decoration, painting, gypsum and maintenance services.
-  </p>
+<section class="hero" id="work">
+  <div class="eyebrow">OUR WORK</div>
+  <h1>Our Recent Projects</h1>
+  <p>We take pride in delivering high-quality decoration and maintenance solutions that bring our clients' visions to life.</p>
 </section>
 
-<section id="services">
-  <h2 id="servicesTitle">Our Services</h2>
-
-  <div class="services">
-
-    <div class="service">
-      <h3 id="s1Title">Gypsum Decoration</h3>
-      <p id="s1Text">Beautiful gypsum ceiling, partition and decoration work.</p>
-    </div>
-
-    <div class="service">
-      <h3 id="s2Title">Painting</h3>
-      <p id="s2Text">Interior and exterior painting with professional finishing.</p>
-    </div>
-
-    <div class="service">
-      <h3 id="s3Title">Tile Fixing</h3>
-      <p id="s3Text">Professional wall and floor tile fixing services.</p>
-    </div>
-
-    <div class="service">
-      <h3 id="s4Title">Maintenance</h3>
-      <p id="s4Text">General building decoration and maintenance services.</p>
-    </div>
-
+<section>
+  <div class="filters">
+    <span class="filter active">All Projects</span><span class="filter">Gypsum Ceiling</span><span class="filter">Painting</span><span class="filter">LED Ceiling</span><span class="filter">Maintenance</span><span class="filter">MDF & Interior</span>
+  </div>
+  <div class="gallery">
+    <article class="card"><img src="images/gypsum-ceiling.jpg" alt="Gypsum ceiling work"><div class="card-body"><span class="badge">⌂</span><h3>Gypsum Ceiling Work</h3><p>Modern gypsum ceiling design with track lights installation.</p><div class="meta"><span>📍 UAE</span><span>🛠️ Gypsum</span></div></div></article>
+    <article class="card"><img src="images/led-ceiling.jpg" alt="LED ceiling design"><div class="card-body"><span class="badge">✦</span><h3>LED Ceiling Design</h3><p>Elegant LED strip ceiling design for a modern and luxurious look.</p><div class="meta"><span>📍 UAE</span><span>💡 LED Ceiling</span></div></div></article>
+    <article class="card"><img src="images/gypsum-progress.jpg" alt="Gypsum work in progress"><div class="card-body"><span class="badge">🔧</span><h3>Gypsum Work in Progress</h3><p>High-quality gypsum ceiling work with careful finishing and detailing.</p><div class="meta"><span>📍 UAE</span><span>🧱 Decoration</span></div></div></article>
   </div>
 </section>
 
-<section id="about">
-  <h2 id="aboutTitle">About Us</h2>
-  <p id="aboutText">
-    Deluar Decoration & Maintenance provides reliable decoration,
-    painting, gypsum, tile fixing and general maintenance services.
-  </p>
-</section>
+<section id="services"><div style="text-align:center;max-width:700px;margin:auto"><div class="eyebrow">OUR SERVICES</div><h2 style="font-size:36px;margin:8px 0 12px">Decoration & Maintenance</h2><p style="color:#66707d">Gypsum decoration, ceiling design, painting, renovation and general building maintenance.</p></div></section>
 
-<section id="contact" class="contact">
-  <h2 id="contactTitle">Contact Us</h2>
-  <p id="contactText">For service enquiries, contact us on WhatsApp.</p>
-
-  <a class="whatsapp"
-     href="https://wa.me/971557205767"
-     target="_blank">
-     WhatsApp
-  </a>
-</section>
-
-<footer>
-  <p>© 2026 Deluar Decoration & Maintenance</p>
-</footer>
-
-<script>
-
-const text = {
-
-en: {
-tagline: "Professional Decoration & Maintenance Services",
-navHome: "Home",
-navServices: "Services",
-navAbout: "About",
-navContact: "Contact",
-heroTitle: "Welcome to Deluar Decoration & Maintenance",
-heroText: "Quality decoration, painting, gypsum and maintenance services.",
-servicesTitle: "Our Services",
-s1Title: "Gypsum Decoration",
-s1Text: "Beautiful gypsum ceiling, partition and decoration work.",
-s2Title: "Painting",
-s2Text: "Interior and exterior painting with professional finishing.",
-s3Title: "Tile Fixing",
-s3Text: "Professional wall and floor tile fixing services.",
-s4Title: "Maintenance",
-s4Text: "General building decoration and maintenance services.",
-aboutTitle: "About Us",
-aboutText: "Deluar Decoration & Maintenance provides reliable decoration, painting, gypsum, tile fixing and general maintenance services.",
-contactTitle: "Contact Us",
-contactText: "For service enquiries, contact us on WhatsApp."
-},
-
-bn: {
-tagline: "পেশাদার ডেকোরেশন ও মেইনটেন্যান্স সার্ভিস",
-navHome: "হোম",
-navServices: "সার্ভিস",
-navAbout: "আমাদের সম্পর্কে",
-navContact: "যোগাযোগ",
-heroTitle: "Deluar Decoration & Maintenance-এ স্বাগতম",
-heroText: "মানসম্মত ডেকোরেশন, পেইন্টিং, জিপসাম ও মেইনটেন্যান্স সার্ভিস।",
-servicesTitle: "আমাদের সার্ভিস",
-s1Title: "জিপসাম ডেকোরেশন",
-s1Text: "সুন্দর জিপসাম সিলিং, পার্টিশন ও ডেকোরেশন কাজ।",
-s2Title: "পেইন্টিং",
-s2Text: "পেশাদার ফিনিশিংসহ ঘরের ভিতর ও বাইরের পেইন্টিং।",
-s3Title: "টাইলস ফিক্সিং",
-s3Text: "দেয়াল ও মেঝের টাইলস ফিক্সিং সার্ভিস।",
-s4Title: "মেইনটেন্যান্স",
-s4Text: "বিল্ডিং ডেকোরেশন ও সাধারণ মেইনটেন্যান্স সার্ভিস।",
-aboutTitle: "আমাদের সম্পর্কে",
-aboutText: "Deluar Decoration & Maintenance নির্ভরযোগ্য ডেকোরেশন, পেইন্টিং, জিপসাম, টাইলস ও সাধারণ মেইনটেন্যান্স সার্ভিস প্রদান করে।",
-contactTitle: "যোগাযোগ করুন",
-contactText: "সার্ভিসের জন্য WhatsApp-এ যোগাযোগ করুন।"
-},
-
-ar: {
-tagline: "خدمات الديكور والصيانة الاحترافية",
-navHome: "الرئيسية",
-navServices: "الخدمات",
-navAbout: "من نحن",
-navContact: "اتصل بنا",
-heroTitle: "مرحباً بكم في Deluar Decoration & Maintenance",
-heroText: "خدمات عالية الجودة في الديكور والدهان والجبس والصيانة.",
-servicesTitle: "خدماتنا",
-s1Title: "ديكور الجبس",
-s1Text: "أعمال أسقف الجبس والقواطع والديكور بشكل احترافي.",
-s2Title: "الدهان",
-s2Text: "دهان داخلي وخارجي مع تشطيب احترافي.",
-s3Title: "تركيب البلاط",
-s3Text: "خدمات تركيب بلاط الجدران والأرضيات.",
-s4Title: "الصيانة",
-s4Text: "خدمات الديكور والصيانة العامة للمباني.",
-aboutTitle: "من نحن",
-aboutText: "تقدم Deluar Decoration & Maintenance خدمات موثوقة في الديكور والدهان والجبس وتركيب البلاط والصيانة العامة.",
-contactTitle: "اتصل بنا",
-contactText: "للاستفسار عن الخدمات، تواصل معنا عبر واتساب."
-}
-
-};
-
-function setLanguage(lang) {
-
-  for (const id in text[lang]) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.textContent = text[lang][id];
-    }
-  }
-
-  if (lang === "ar") {
-    document.documentElement.lang = "ar";
-    document.body.dir = "rtl";
-  } else {
-    document.documentElement.lang = lang;
-    document.body.dir = "ltr";
-  }
-}
-
-setLanguage("en");
-
-</script>
-
+<div class="cta" id="contact">
+  <div><h2>Let's Build Something<br>Beautiful Together</h2><p>Quality decoration and maintenance services with care and perfection.</p><a class="cta-btn" href="https://wa.me/971557205767" target="_blank">Get a Free Quote →</a></div>
+  <div class="features" id="why">
+    <div class="feature"><strong>✓ High Quality</strong><span>Quality materials and clean finishing.</span></div>
+    <div class="feature"><strong>👥 Skilled Team</strong><span>Experienced and reliable workmanship.</span></div>
+    <div class="feature"><strong>◷ On Time</strong><span>We respect your project schedule.</span></div>
+    <div class="feature"><strong>☎ Support</strong><span>Easy contact through WhatsApp or call.</span></div>
+  </div>
+</div>
+<footer id="about">© 2026 Deluar Decoration & Maintenance. All rights reserved.</footer>
 </body>
 </html>
